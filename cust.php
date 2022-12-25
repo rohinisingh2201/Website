@@ -1,3 +1,9 @@
+<head>
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="log.css">
+</head>
+
 <?php 
 
 // require_once 'main.php';
@@ -67,72 +73,101 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<form name=customer action="<?php $_SERVER["PHP_SELF"]; ?>" method=post  >
-<center>
-<table width=30% >
-<tr>
-<th colspan=2>Customer Entry:</th>
-</tr>
-<tr>
-<td>Name:</td>
-<td><input type=text id=cust_name name=cust_name ></td>
-<td><span class="error">* <?php echo $nameErr;?></span></td>
-</tr>
-<tr>
-<td>Address Line1:</td>
-<td><input type=text id=address_1 name=address_1 ></td> 
-</tr>
-<tr>
-<td>Address Line2:</td>
-<td><input type=text id=address_2 name=address_2 ></td>
-</tr>
-<tr>
-<td>City:</td>
-<td><input type=text id=city name=city ></td>
-</tr>
-<tr>
-<td>Pincode:</td>
-<td><input type=text id=pincode name=pincode ></td>
-</tr>
-<tr>
-<td>State:</td>
-<td><input type=text id=state name=state ></td>
-</tr>
-<tr>
-<td>Country:</td>
-<td><input type=text id=country name=country ></td>
-</tr>
-<tr>
-<td>Email:</td>
-<td><input type=text id=cust_email name=cust_email ></td>
-</tr>
-<tr>
-<td>Mobile:</td>
-<td><input type=text id=cust_mobile name=cust_mobile ></td>
-</tr>
-<tr>
-<td>Are you dealer?:</td>
-<td><input type=text id=is_dealer name=is_dealer ></td>
-</tr>
-<tr>
-<td>User Name:</td>
-<td><input type=text id=cust_username name=cust_username ></td>
-</tr>
-<tr>
-<td>Password:</td>
-<td><input type=password id=cust_password name=cust_password ></td>
-</tr>
-<tr>
-<td>Re Enter Password:</td>
-<td><input type=password id=cust_repassword name=cust_repassword ></td>
-</tr>
-<tr>
-<td align=right><input type=submit value=save name=submit ></td>
-<td><input type=reset value=reset ></td>
-</tr>
-</table>
-</center>
-</form> 
+<section class=login>
+	<div class="container">
+		<div class="row">
+		    <div class="col-md-7 col-lg-7 register-col">
+			<form class="login-form" name=customer action="<?php $_SERVER["PHP_SELF"]; ?>" method=post  >
+		
+
+                <h1>Customer Entry</h1>
+
+                <div class="form-control-register">
+                    <div>
+					    <label>Name:</label>
+                        <input class=register-form-input type=text id=cust_name name=cust_name >
+                        <span class="error">* <?php echo $nameErr;?></span>
+					</div>
+					<div>
+					    <label>Address Line1:</label>
+                        <input class=register-form-input type=text id=address_1 name=address_1 > 
+					</div>
+                 </div>
+                 <div class="form-control-register">
+                      <div>
+					    <label>Address Line2:</label>
+                        <input class=register-form-input type=text id=address_2 name=address_2 >
+					  </div>
+                      <div>
+					      <label>City:</label>
+                           <input class=register-form-input type=text id=city name=city >
+					  </div>
+                 </div>
+
+				 <div class="form-control-register">
+                      <div>
+					      <label>Pincode:</label>
+                           <input class=register-form-input type=text id=pincode name=pincode maxlength="6" >
+					  </div>
+                      <div>
+					        <label>State:</label>
+                            <input class=register-form-input type=text id=state name=state >
+					  </div>
+                 </div>
+
+				 <div class="form-control-register">
+                      <div>
+					      <label>Country:</label>
+                          <input class=register-form-input type=text id=country name=country >
+					  </div>
+                      <div>
+					       <label>Email:</label>
+                           <input class=register-form-input type=text id=cust_email name=cust_email >
+					  </div>
+                 </div>
+
+				 <div class="form-control-register">
+                      <div>
+					        <label>Mobile:</label>
+                            <input class=register-form-input type=text id=cust_mobile name=cust_mobile >
+					  </div>
+                      <div>
+					      <label>Are you dealer?:</label>
+                           <input class=register-form-input type=text id=is_dealer name=is_dealer >
+					  </div>
+                 </div>
+
+				 <div class="form-control-register">
+                      <div>
+					       <label>User Name:</label>
+                           <input class=register-form-input type=text id=cust_username name=cust_username >
+					  </div>
+                      <div>
+					       <label>Password:</label>
+                            <input class=register-form-input type=password id=cust_password name=cust_password >
+					  </div>
+                 </div>
+                 <div class="form-control-register">
+                    <div>
+					   <label>Re Enter Password:</label>
+                       <input class=register-form-input type=password id=cust_repassword name=cust_repassword >
+					</div>
+					<div>
+
+					</div>
+                 </div>
+            <div class="button-container">
+            <input class="btn btn-primary" type=submit value=save name=submit >
+            <input class="btn btn-danger" type=reset value=reset >
+        </div>
+    </form>
+			 </div>
+			 <div class="col-md-5 col-lg-5">
+				<img src="./register.png" alt="some image" class=login-asset>
+			 </div>
+		</div>
+	</div>
+</section>
 
 
 

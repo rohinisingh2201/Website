@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.nav {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 0;
+    background-color: #3498db0e;
+}
+
+.nav.row {
+    align-items: center;
+}
+
+header h2 {
+    display: inline;
+    font-size: 25px;
+}
+
+.company-name {
+    width: 55%;
+}
+
+.main-nav {
+    width: 45%;
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #000;
+    transition: all .3s;
+}
+
+.main-nav li a:hover {
+    color: #3498de;
+}
+
+.product-page {
+    padding: 50px 0;
+}
+
+.product-page h1 {
+    font-size: 25px;
+    color: #2B83EA;
+    margin-bottom: 40px;
+}
+
+.form-control-prod {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 15px;
+}
+
+.form-control-prod:first-child {
+    margin-top: 0;
+}
+
+.form-control-prod label {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.form-control-prod input {
+    width: 30%;
+    border-radius: 50px;
+    border: 2px solid #2B83EA;
+    padding: 7px 20px;
+}
+
+.form-control-prod input:active,
+.form-control-prod input:focus {
+    outline: none;
+}
+
+.product-page .button-container {
+    margin-top: 40px;
+}
+
+.form-control-prod .error {
+    position: absolute;
+    color: #e74c3c;
+    font-size: 18px;
+    top: 2%;
+    left: 6.5%;
+}

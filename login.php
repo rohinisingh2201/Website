@@ -1,5 +1,6 @@
 <head>
 <link rel="shortcut icon" href="/assets/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link rel="stylesheet" href="log.css">
 </head>
 
@@ -78,31 +79,45 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<form name=basic action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
-<center>
-<table width=30% >
-<tr>
-<th colspan=2>Login:</th>
-</tr>
-<tr>
-<td>User Name:</td>
-<td><input type=text id=username name=username ></td>
-<td><span class="error">* <?php echo $nameErr;?></span></td>
-</tr>
-<tr>
-<td>Password:</td>
-<td><input type=password id=password name=password ></td></tr>
+<section class=login>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-lg-7">
+			<form class="login-form" name=basic action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
 
-<td align=right><input type=submit value=save name=submit ></td>
-<td><input type=reset value=reset ></td>
-</tr>
-<!-- <td align=right><input type=submit value=dt name= Don't have an account? Create account ><p class="form__text">
-    <a class="form__link" href="cust.php" id="">Don't have an account? Create account</a>
-    </p>
-</td> -->
-</table>
-</center>
-</form>
+				<h1>Login</h1>
+					
+					<div class="form-control">
+						<label for="username">User Name:</label>
+						<input type=text id=username name=username >
+						<span class="error">* <?php echo $nameErr;?></span>
+					</div>
+					
+					
+					<div class="form-control">
+						<label for="password">Password:</label>
+						<input type=password id=password name=password >
+					</div>
+
+					<div class="button-container">
+					<input class="btn btn-primary" type=submit value=save name=submit >
+					<input class="btn btn-danger" type=reset value=reset >
+					</div>
+					
+					<!-- <td align=right><input type=submit value=dt name= Don't have an account? Create account ><p class="form__text">
+						<a class="form__link" href="cust.php" id="">Don't have an account? Create account</a>
+						</p>
+					</td> -->
+					
+				</form>
+				<a href="cust.php" class=sign-up-link> Don't have an account? Create account</a>
+			</div>
+			<div class="col-md-5 col-lg-5">
+				<img src="./login-page.png" alt="login page" class=login-asset>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- <form name="create" action="cust.php" method="POST">
 	<tr>
@@ -112,7 +127,7 @@ if (isset($_POST['submit'])) {
 
 
 
-<a href="cust.php"> Don't have an account? Create account</a>
+
 
 <!-- <body>
 <div class="container">

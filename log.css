@@ -1,130 +1,122 @@
-body {
-    --color-primary: #009579;
-    --color-primary-dark: #007f67;
-    --color-secondary: #252c6a;
-    --color-error: #cc3333;
-    --color-success: #4bb544;
-    --border-radius: 4px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-    margin: 0;
-    height: 100vh;
+.login {
+    background-color: #3498db0e;
+    /* height: 100vh; */
+    font-family: 'Montserrat', sans-serif;
+    /* background: url("./watermark.png");
+    background-size: contain;
+    background-position: center; */
+
+}
+
+.login .col-md-7 {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    font-size: 18px;
-    background: url(./background.jpg);
-    background-size: cover;
+    padding: 150px 0;
 }
 
-.container {
-    width: 400px;
-    max-width: 400px;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
-    background: #ffffff;
+.register-col {
+    padding: 60px 0 !important;
 }
 
-.container,
-.form__input,
-.form__button {
-    font: 500 1rem 'Quicksand', sans-serif;
+.login .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.form--hidden {
-    display: none;
-}
-
-.form > *:first-child {
-    margin-top: 0;
-}
-
-.form > *:last-child {
-    margin-bottom: 0;
-}
-
-.form__title {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.form__message {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.form__message--success {
-    color: var(--color-success);
-}
-
-.form__message--error {
-    color: var(--color-error);
-}
-
-.form__input-group {
-    margin-bottom: 1rem;
-}
-
-.form__input {
-    display: block;
+.login-asset {
+    height: auto;
     width: 100%;
-    padding: 0.75rem;
-    box-sizing: border-box;
-    border-radius: var(--border-radius);
-    border: 1px solid #dddddd;
+}
+
+.login .col-md-8 {
+    padding: 50px 0;
+}
+
+.login h1 {
+    font-size: 25px;
+    color: #2B83EA;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.btn {
+    border: none !important;
+}
+
+.login-form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.login-form input {
+    font-size: 16px;
+    padding: 7px 15px;
+    width: 60%;
+    border: 2px solid #3498db;
+    border-radius: 50px;
+}
+
+.register-form-input {
+    width: 90% !important;
+}
+
+.btn-primary {
+    margin-right: 40px;
+}
+
+.login-form input:active,
+.login-form input:focus {
     outline: none;
-    background: #eeeeee;
-    transition: background 0.2s, border-color 0.2s;
 }
 
-.form__input:focus {
-    border-color: var(--color-primary);
-    background: #ffffff;
-}
-
-.form__input--error {
-    color: var(--color-error);
-    border-color: var(--color-error);
-}
-
-.form__input-error-message {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--color-error);
-}
-
-.form__button {
-    width: 100%;
-    padding: 1rem 2rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #5b1111;
+.form-control {
+    display: flex;
+    flex-direction: column;
     border: none;
-    border-radius: var(--border-radius);
-    outline: none;
-    cursor: pointer;
-    /* background: var(--color-primary); */
+    background-color: inherit;
+    position: relative;
 }
 
-.form__button:hover {
-    background: var(--color-primary-dark);
+.form-control-register {
+    display: flex;
+    margin-top: 30px;
 }
 
-.form__button:active {
-    transform: scale(0.98);
+.form-control-register>div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
 }
 
-.form__text {
-    text-align: center;
+.form-control-register:first-of-type {
+    margin-top: 0 !important;
 }
 
-.form__link {
-    color: var(--color-secondary);
+.button-container {
+    width: 60%;
+    display: flex;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.sign-up-link {
     text-decoration: none;
-    cursor: pointer;
+    margin-top: 60px;
+    transition: all .3s;
 }
 
-.form__link:hover {
-    text-decoration: underline;
+.sign-up-link:hover {
+    transform: translateY(-3px);
+}
+
+.error {
+    position: absolute;
+    color: #e74c3c;
+    top: 5%;
+    left: 13%;
 }

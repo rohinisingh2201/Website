@@ -1,3 +1,9 @@
+<head>
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="app.css">
+</head>
+
 <?php require_once 'main.php';?>
 <?php
 
@@ -48,31 +54,35 @@ if (isset($_POST['submit'])) {
 
 ?>
 <?php require_once 'main.php';?>
-<form name=basic action="<?php $_SERVER["PHP_SELF"]; ?>" method=post  >
-<center>
-<table width=30% >
-<tr>
-<th colspan=2>basic Entry:</th>
-</tr>
-<tr>
-<td>basic Name:</td>
-<td><input type=text id=prod_name name=prod_name ></td>
-<td><span class="error">* <?php echo $nameErr;?></span></td>
-</tr>
-<tr>
-<td>basic Rate:</td>
-<td><input type=text id=prod_rate name=prod_rate ></td>
-</tr>
-<tr>
-<td>Quantity on hand:</td>
-<td><input type=text id=prod_qoh name=prod_qoh ></td>
-</tr>
-<td align=right><input type=submit value=save name=submit ></td>
-<td><input type=reset value=reset ></td>
-</tr>
-</table>
-</center>
-</form>
+<section class=product-page>
+<div class="container">
+	<div class="row">
+        <h1>Basic Entry</h1>
+	    <form name=basic action="<?php $_SERVER["PHP_SELF"]; ?>" method=post  >
+            <div class="form-control-prod">
+			    <label for="prod_name">Basic Name</label>
+                <input type=text id=prod_name name=prod_name >
+                <span class="error">* <?php echo $nameErr;?></span>    
+			</div>
+
+			<div class="form-control-prod">
+			    <label for="prod_name">basic Rate</label>
+                <input type=text id=prod_rate name=prod_rate >
+			</div>
+
+			<div class="form-control-prod">
+			    <label for="prod_name">Quantity on hand:</label>
+                <input type=text id=prod_qoh name=prod_qoh >
+			</div>
+            
+			<div class="button-container">
+			    <input class="btn btn-primary" type=submit value=save name=submit >
+                <input class="btn btn-danger" type=reset value=reset >
+			</div>
+        </form>
+	</div>
+</div>
+</section>
 
 <?php
 
