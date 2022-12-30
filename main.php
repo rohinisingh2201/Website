@@ -13,7 +13,7 @@ if($_SESSION["cust_username"]  == "")
 {
 	header("location: ./login.php");	
 }
-// ?>
+ ?> 
 
 <header class=nav>
      <div class="container">
